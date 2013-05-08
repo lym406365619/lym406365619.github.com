@@ -2,30 +2,30 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title> {% if page.title %} {{ page.title }} | {% endif %} John Doe, Photographer </title>
-  <link rel="stylesheet" href="/css/styles.css" />
+  <title> {% if page.title %} {{ page.title }} | {% endif %} LYM的私人博客 </title>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-  <div id="main">
+  <div class="main">
 
-    <header>
-      <h1> John Doe Photograghy </h1>
+    <header class="hd">
+      <h1> LYM -- 放浪形骸，踏歌雾霭；君心可晴，且歌且行 </h1>
     <header>
 
-    <nav role="navigation">
+    <nav class="main-nav">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/portfolio/">Portfolio</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+	<li><a href="/"><b>主页</b></a></li>
+	<li><a href="/blog.html"><b>博客</b></a></li>
+        <li><a href="/about.html"><b>关于我</b></a></li>
+        <li><a href="/contact.html"><b>联系方式</b></a></li>
       </ul>
     </nav>
 
     {{ content }}
 
     <footer>
-      <p>@copy; John Doe Photography 2011 | All Rights Reserved. </p>
+      <p>版权所有：LYM</p>
     </footer>
 
   </div>

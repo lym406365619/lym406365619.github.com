@@ -1,74 +1,80 @@
 body {
-  font: 16px/1.5 verdana, helvetica-neue, helvetica, arial, san-serif;
-  background: black;
-  color: #ececec;
+  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+  font-size: 21px;
+  font-weight: 200;
+  color: #ddd;
+  background: ##EDEDED;
+  border-top: 5px solid #fc0;
+  box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+nav ul {
   padding: 0;
   margin: 0;
+  margin-left:1em; 
+  list-style: circle outside none; 
 }
-ul {
-  margin: 0;
+
+nav li {
+  display: inline-block;
+}
+
+.main {
+  position: relative; 
+  margin: 0 auto; 
+  max-width: 1024px; 
+  _width: 1024px;
+}
+
+.hd { 
+  color: #1E90FF; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #222; 
+}
+
+.hd h1 { 
+  font-size: 36px;
+  padding: 16px 0; 
+}
+
+.main-nav {
   padding: 0;
-}
-a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ececec;
-  text-decoration: underline;
+  margin: 0 0 0 2cm;
+  position:relative; 
+  letter-spacing:2px; 
+  font-size:20px;
 }
 
-#main {
-  width: 960px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.4);
-}
-header {
-  padding: 0 10px;
-  overflow: hidden;
-}
-h1 {
-  margin: 0;
+.main-nav li { 
+  float:left; 
+  padding-right:20px; 
 }
 
-nav ul, ul.entries {
-  list-style-type: none;
-}
-nav li a {
-  float: left;
-  margin: 5px; 
-}
-.content {
-  padding: 10px;
+.main-nav li a {
+  border-radius: 5px;
+  text-shadow: none;
+  transition: all .25s;
+  -moz-transition: all .25s;
+  -webkit-transition: all .25s;
 }
 
-ul.entries li {
-  position: relative;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ececec;
-  width: 600px;
+.main-nav li a:hover {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(238,230,133,.1);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-ul.entries img {
-  width: 600px;
+.main-nav li.current a {
+  color: #222;
+  box-shadow: inset 0 1px 0 rgba(238,230,133,.5), 0 1px 5px rgba(0,0,0,.5);
+  text-shadow: 0 1px 0 rgba(238,230,133,.3);
 }
 
-ul.entries li h3 {
-  position: absolute;
-  bottom: -18px;
-  left: 17px;
-  font-size: 2em;
-}
-ul.entries a {
-  color: #ececec;
-}
-ul.entries a:hover {
-  color: #fff;
-}
 
-footer {
-  font-size: 0.65em;
-  text-align: center;
-}
+
+
+
+
+
+
+
