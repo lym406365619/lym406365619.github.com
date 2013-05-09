@@ -1,5 +1,9 @@
+* {
+    word-wrap: break-word;
+}
+
 body {
-  font-family: Lato, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', sans-serif;
+  font-family: 'Microsoft YaHei',微软雅黑,宋体，Tahoma,Helvetica,'SimSun',sans-serif;
   font-size: 21px;
   font-weight: 200;
   color: #ddd;
@@ -31,6 +35,9 @@ nav li {
   color: #1E90FF; 
   text-align: center; 
   text-shadow: 0 1px 1px #222; 
+  height: 150px;
+  width: 1000px;
+  background: url("/img/header.jpg") no-repeat center 0px;
 }
 
 .hd h1 { 
@@ -43,7 +50,7 @@ nav li {
   margin: 0 0 0 2cm;
   position:relative; 
   letter-spacing:2px; 
-  font-size:20px;
+  font-size:22px;
 }
 
 .main-nav li { 
@@ -71,6 +78,35 @@ nav li {
   text-shadow: 0 1px 0 rgba(238,230,133,.3);
 }
 
+.frame {
+    background: none repeat scroll 0% 0% transparent;
+    width: 1000px;
+    margin: 10px;
+}
+
+.block {
+    padding: 0px;
+    margin: 0px 5px 10px;
+    border: 1px solid rgb(221, 221, 221);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+
+.block .title {
+    padding: 0px 10px;
+    font-size: 15px; 
+    color: rgb(51, 51, 51);
+    background: url("/img/title.png") repeat-x scroll 0px 0px rgb(234, 241, 242);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    height: 32px;
+    ont-weight: 700;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+.as {
+    padding: 0px;
+    margin: 10px 0px 10px 10px;
+}
 
 
 
