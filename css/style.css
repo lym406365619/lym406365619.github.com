@@ -54,6 +54,7 @@ nav li {
 .main-nav li a {
   border-radius: 5px;
   text-shadow: none;
+  text-decoration:none; /*去掉链接下划线*/
   transition: all .25s;
   -moz-transition: all .25s;
   -webkit-transition: all .25s;
