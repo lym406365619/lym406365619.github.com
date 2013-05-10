@@ -13,6 +13,11 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
 nav ul {
   padding: 0;
   margin: 0;
@@ -40,7 +45,6 @@ nav li {
   text-align: center; 
   text-shadow: 0 1px 1px #222; 
   height: 150px;
-  width: 1000px;
   background: url("/img/header.jpg") no-repeat center 0px;
 }
 
@@ -84,8 +88,13 @@ nav li {
 
 .frame {
     background: none repeat scroll 0% 0% transparent;
-    width: 1000px;
-    margin: 10px;
+    margin: 0px;
+    border: medium none;
+}
+
+.frame_b {
+    overflow: hidden;
+    float: left;
 }
 
 .block {
@@ -98,18 +107,13 @@ nav li {
 .block .title {
     padding: 0px 10px;
     font-size: 18px; 
-    color: rgb(51, 51, 51);
+    color: rgb(240, 133, 25);
     background: url("/img/title.png") repeat-x scroll 0px 0px rgb(234, 241, 242);
     border-bottom: 1px solid rgb(221, 221, 221);
     height: 32px;
-    ont-weight: 700;
+    font-weight: 700;
     line-height: 32px;
     overflow: hidden;
-}
-
-.as {
-    padding: 0px;
-    margin: 10px 0px 10px 10px;
 }
 
 .block .dxb_bc {
@@ -117,7 +121,12 @@ nav li {
 }
 
 .cont {
-    text-align: center;
+    padding-top: 15px;
+    border: medium none;
+    background: none repeat scroll 0% 0% transparent !important;
+    min-height: 300px;
+    width: 970px;
+    margin: 0px auto;
 }
 
 .fig {
@@ -126,8 +135,33 @@ nav li {
     color: rgb(51, 51, 51)
 }
 
+.ft {
+    border-top: 1px solid rgb(204, 204, 204);
+    padding: 10px 0px 50px;
+    line-height: 1.8;
+    color: rgb(102, 102, 102);
+    border: 0px none;
+    width: 1000px;
+    margin: 0px auto;
+    text-align: center;
+}
 
+.art {
+    padding: 0px 5px;
+}
 
+.hm {
+    text-align: center;
+}
+
+.mbn {
+    margin-bottom: 5px !important;
+    font-size: 16px;
+    color: rgb(255, 185, 15);
+}
+
+.desc {
+}
 
 
 
