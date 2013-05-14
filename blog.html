@@ -3,9 +3,22 @@ layout: blog-aside
 title: 博客
 ---
 {% for post in site.posts %}
-    <div class="item">
-        <h3><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
-        <p class="desc">{{ post.summary }}...</p>
-        <p class="other"><a href="{{ BASE_PATH }}{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：{% for tag in post.tags %}<a href="{{ BASE_PATH }}/tags.html#{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}</span></p>
+    <div class="post">
+	<div class="conent_collect">
+
+	   <h3><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+	   <div class="post_content">
+              <p class="summary">{{ post.summary }}...</p>
+              <p class="read_all"><a href="{{ BASE_PATH }}{{ post.url }}" class="read">全文阅读 >> </a></p>
+           </div>
+        </div>
+        <dl class="content_info">
+	    <dt class="info_date">发布时间</dt>
+            <dd class="post_date">{{ post.date | date: "%Y-%m-%d" }}</dd>
+            <dt class="info_category">类别</dt>
+            <dd class="post_category">{% for categories in post.categories %}<a href="{{ BASE_PATH }}/categories.html#{{ categories }}" class="category">{{ categories }}</a>{% endfor %}</dd>
+            <dt class="info_tag">标签</dt>
+            <dd class="post_tag">{% for tag in post.tags %}<a href="{{ BASE_PATH }}/tags.html#{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}</dd>
+	  </dl>
     </div>
 {% endfor %}

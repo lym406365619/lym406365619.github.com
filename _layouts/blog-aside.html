@@ -1,32 +1,25 @@
 ---
 layout: default
 ---
-<div class="frame">
-   <div class="frame_b" style="width:260px">
+<div class="frame_left">
    <div class="block">
     <div class="blocktitle title">
          <span>我的头像</span>
     </div>
     <div class=dxb_bc>
          <div class="hm">
-          <p>
+          <section>
 	    <img src="/img/head.jpg"></img>
-          </p>
-	  <h2 class="mbn">LYM</h2>
+          </section>
+	  <h4 class="mbn">LYM</h4>
           </div>
           <div class="desc">
 	    欢迎访问我的博客空间！
           </div>
       </div>
      </div>
-     </div>
+</div>
 
-   <div class="frame_b" style="width:700px">
-    <section id="content">
-	<h2>{{ page.title }}</h2>
-	{{content}}
-    </section>
-   </div>
-
-</div>   
-
+<div class="frame_right">
+    {{content}}
+</div>
