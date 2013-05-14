@@ -390,6 +390,7 @@ a.tag:hover {
 
 .ar_list li {
     line-height: 24px;
+    position: relative;
 }
 
 .ar_list li a {
@@ -399,6 +400,13 @@ a.tag:hover {
 
 .ar_list li a:hover {
     text-decoration: underline;
+}
+
+.ar_list li span {
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    color: rgb(51, 51, 51);
 }
 
 
