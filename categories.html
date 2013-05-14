@@ -1,0 +1,24 @@
+---
+layout: default
+title: 博客分类
+---
+<section class="ct_list_title">
+    <h4>{{ page.title }}</h4>
+</section>
+
+<section class="ct_list">
+<ul class="tag_box inline">
+  {% assign categories_list = site.categories %}
+  {% include JB/categories_list %}
+</ul>
+
+
+{% for category in site.categories %}
+  <h5 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h5>
+  <ul class="ar_list">
+    {% assign pages_list = category[1] %}
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
+
+</section>
