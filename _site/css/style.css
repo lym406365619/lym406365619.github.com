@@ -47,7 +47,7 @@ a:hover {
   background: url("/img/header.jpg") no-repeat center 0px;
 }
 
-.hd h1 { 
+.hd h1 {
   font-size: 36px;
   padding: 16px 0; 
 }
@@ -179,8 +179,10 @@ nav ul {
 .post {
     display: block;
     overflow: auto;  /* important */
-    border-bottom: 2px solid #FFD;
+    border-bottom: 2px solid rgb(20, 20, 20);
     padding: 10px 0px 0px 0px;
+    background: none repeat scroll 0% 0% rgb(245, 245, 220);
+    margin: 0px 20px;
 }
 
 .conent_collect {
@@ -369,6 +371,10 @@ a.tag:hover {
     border: 1px dashed rgb(150, 150, 150);
 }
 
+.tag_box a:hover {
+    background: none repeat scroll 0% 0% rgb(25, 200, 256);
+}
+
 .tag_box a span {
     vertical-align: super;
     font-size: 15px;
@@ -411,6 +417,49 @@ a.tag:hover {
 }
 
 
+/*--------------*/
+.as_categories {
+    list-style: circle inside none;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 10px 0px 10px 15px;
+}
+
+.as_categories a {
+    text-decoration: none;
+    background: none repeat scroll 0% 0% rgb(25, 238, 230);
+    border-radius: 15px 15px 15px 15px;
+    margin: 5px;
+    border: 1px dashed rgb(150, 150, 150);
+    padding: 1px 2px;
+}
+
+.as_categories a span {
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    font-size: 13px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 1px 6px;
+    vertical-align: middle;
+    margin: 0px 5px;
+}
+
+.as_categories a:hover {
+    background: none repeat scroll 0% 0% rgb(25, 200, 256);
+}
+
+#as_tags li {
+    font-size: 20px;
+    line-height: 100%;
+}
+
+#as_tags a span {
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    font-size: 13px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 1px 6px;
+    vertical-align: middle;
+    margin: 0px 0px 0px -4px;
+}
 
 
 

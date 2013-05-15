@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class="frame_left">
    <div class="block">
     <div class="blocktitle title">
@@ -22,7 +23,25 @@ layout: default
     <div class="block">
       <div class="blocktitle title">
         <span>博客分类</span>
-      </div>      
+      </div>  
+      <div>
+        <ul class="as_categories">
+            {% assign categories_list = site.categories %}
+            {% include JB/categories_list %}
+        </ul>
+       </div>    
+    </div>
+
+    <div class="block">
+      <div class="blocktitle title">
+        <span>博客标签</span>
+      </div>  
+      <div>
+        <ul id="as_tags" class="tag_box inline">
+         {% assign tags_list = site.tags %}
+         {% include JB/tags_list %}
+        </ul>
+       </div>    
     </div>
 </div>
 

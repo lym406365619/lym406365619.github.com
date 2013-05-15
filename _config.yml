@@ -12,3 +12,9 @@ author:
     name : lym
     email : luyueming1989@gmail.com
     github : https://github.com/lym406365619
+
+#设置标签、分类等路径
+JB :
+    BASE_PATH : false
+    categories_path : /categories.html
+    tags_path : /tags.html
