@@ -1,0 +1,14 @@
+---
+layout: default
+title : 博客归档
+---
+{% include JB/setup %}
+
+<div class="ct_list_title">
+    <h4>{{ page.title }}</h4>
+</div>
+
+<div class="ct_list">
+    {% assign posts_collate = site.posts %}
+    {% include JB/posts_collate %}
+</div>
