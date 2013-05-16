@@ -308,6 +308,41 @@ a.tag:hover {
 }
 
 /* ------------ */
+.post_cont {
+    background: none repeat scroll 0% 0% rgb(252, 242, 215);
+    margin: 15px 25px;
+    padding: 5px 25px;
+    border-radius: 25px 25px 25px 25px;
+    border: 2px solid rgb(150, 150, 150);
+}
+
+.post_cont h1 {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(10, 192, 238);
+    margin: 25px 0px;
+}
+
+.post_cont h2 {
+    margin: 5px 25px;
+    font-size: 24px;
+    color: rgb(90, 192, 238);
+}
+
+.post_cont h3 {
+    margin: 2px 25px;
+    font-size: 22px;
+    color: rgb(120, 192, 238);
+}
+
+.post_cont p {
+    font-size: 18px;
+    text-indent: 36px;
+    color: rgb(51, 51, 51);
+    line-height: 150%;
+    margin: 5px 0px;
+}
+ 
 #blog h1 {
     text-align: center;
     font-size: 35px;
