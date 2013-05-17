@@ -462,6 +462,10 @@ a.tag:hover {
     padding: 10px 0px 10px 15px;
 }
 
+.as_categories li {
+    padding: 3px;
+}
+
 .as_categories a {
     text-decoration: none;
     background: none repeat scroll 0% 0% rgb(25, 238, 230);
@@ -509,9 +513,39 @@ a.tag:hover {
     padding: 0px 0px 10px 10px;
 }
 
+/*---------------*/
+pre.command-line {
+    font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
+    border: 2px solid rgb(221, 221, 221);
+    background-color: rgb(107, 12, 67);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    overflow: hidden;
+}
 
+pre.command-line em {
+    color: rgb(249, 254, 100);
+    font-style: italic;
+}
 
+pre.command-line .comment {
+    color: rgb(204, 204, 204);
+}
 
+pre span {
+    white-space: pre-wrap;
+}
+
+code {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3) inset, 0px 1px 0px rgba(255, 255, 255, 0.1), 0px -1px 0px rgba(0, 0, 0, 0.5);
+    white-space: pre;
+    display: inline-block;
+    text-indent: 0px;
+    font-size: 16px;
+    color: rgb(25, 25, 255);
+}
+ 
 
 
 
