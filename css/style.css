@@ -435,6 +435,7 @@ a.tag:hover {
 .ar_list li {
     line-height: 24px;
     position: relative;
+    padding: 2px 0px;
 }
 
 .ar_list li a {
@@ -503,14 +504,15 @@ a.tag:hover {
 }
 
 /*----------------*/
-#year {
+.year {
     font-size: 25px;
+    margin: 10px 0px;
 }
 
-#month {
+.month {
     font-size: 23px;
     color: rgb(30, 144, 225);
-    padding: 0px 0px 10px 10px;
+    padding: 10px 0px 10px 10px;
 }
 
 /*---------------*/
@@ -545,10 +547,28 @@ code {
     font-size: 16px;
     color: rgb(25, 25, 255);
 }
+
+/* ------------ */
+.archive {
+    display: block;
+    margin: 10px 20px;
+}
+
+.archive li {
+    list-style: none outside none;
+    margin: 5px;
+    line-height: 120%;
+}
  
+.archive li a {
+    text-decoration: none;
+    color: rgb(255, 117, 0);
+    font-size: 18px;
+}
 
-
-
+.archive li a:hover {
+    text-decoration: underline;
+}
 
 
 

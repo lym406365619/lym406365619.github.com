@@ -1,0 +1,57 @@
+{% if site.JB.posts_list.provider == "custom" %}
+  {% include custom/posts_list %}
+{% else %}
+  {% for post in posts_list %}
+
+    {% if post.next %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
+      {% capture next_year %}{{ post.next.date | date: "%Y" }}{% endcapture %}
+      {% capture next_month %}{{ post.next.date | date: "%m" }}{% endcapture %}
+    {% endif %}  
+
+    {% if forloop.first %}
+        <!-- year -->
+<!--        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a>
+            <ul> -->
+                <!-- month -->
+                <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}#{{ post.date | date: '%Y-%m' }}-ref">{{ post.date | date: '%Y' }}年{{ post.date | date: '%m' }}月</a>
+                    <ul>
+    {% else %}
+        <!-- all other posts -->
+        {% if this_year != next_year %}
+                    </ul>
+                </li>
+                <!-- /month -->						
+<!--            </ul>
+        </li> -->
+        <!-- /year -->
+
+        <!-- year -->       
+<!--        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}#{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</a>
+            <ul> -->
+                <!-- month -->
+                <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}#{{ post.date | date: '%Y-%m' }}-ref">{{ post.date | date: '%Y' }}年{{ post.date | date: '%m' }}月</a>
+                    <ul>
+                        {% elsif this_month != next_month %}
+                    </ul> 
+                </li>
+                <!-- /month -->	
+                <!-- month -->
+                <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}#{{ post.date | date: '%Y-%m' }}-ref">{{ post.date | date: '%Y' }}年{{ post.date | date: '%m' }}月</a>
+                    <ul>
+        {% endif %}
+    {% endif %}
+    {% comment %}<li><a href="/{{ post.url }}">{{ post.title }}</a></li>{% endcomment %}
+
+    {% if forloop.last %}
+                    </ul>
+                </li>
+                <!-- /month -->
+<!--            </ul>
+        </li> -->
+        <!-- /year -->
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign posts_list = nil %}

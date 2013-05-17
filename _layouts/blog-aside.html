@@ -22,6 +22,18 @@ layout: default
 
     <div class="block">
       <div class="blocktitle title">
+        <span>博客存档</span>
+      </div>  
+      <div>
+        <ul class="archive">
+            {% assign posts_list = site.posts %}
+            {% include JB/posts_list %}
+        </ul>
+       </div>    
+    </div>
+
+    <div class="block">
+      <div class="blocktitle title">
         <span>博客分类</span>
       </div>  
       <div>

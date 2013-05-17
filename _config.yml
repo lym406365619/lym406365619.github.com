@@ -18,3 +18,4 @@ JB :
     BASE_PATH : false
     categories_path : /categories.html
     tags_path : /tags.html
+    archive_path : /archive.html

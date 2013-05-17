@@ -8,8 +8,8 @@
     {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
   
     {% if forloop.first %}
-      <h5 id="year">{{this_year}}年</h2>
-      <h6 id="month">{{this_month}}月</h3>
+      <h5 class="year">{{this_year}}年</h5>
+      <h6 class="month" id="{{ post.date | date: '%Y-%m' }}-ref">{{this_month}}月</h6>
       <ul class="ar_list">
         {% endif %}
 
@@ -23,13 +23,13 @@
     {% else %}
       {% if this_year != next_year %}
         </ul>
-        <h5 id="year">{{next_year}}年</h2>
-        <h6 id="month">{{next_month}}月</h3>
+        <h5 class="year">{{next_year}}年</h5>
+        <h6 class="month" id="{{ post.date | date: '%Y-%m' }}-ref">{{next_month}}月</h6>
         <ul class="ar_list">
       {% else %}
         {% if this_month != next_month %}
           </ul>
-          <h5 id="month">{{next_month}}</h3>
+          <h6 class="month" id="{{ post.date | date: '%Y-%m' }}-ref">{{next_month}}月</h6>
           <ul class="ar_list">
         {% endif %}
       {% endif %}
