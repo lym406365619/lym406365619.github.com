@@ -9,7 +9,7 @@ safe: true
 auto: true
 
 #设置分页，每页最多显示8篇博文
-paginate: 8
+paginate: 1
 
 author:
     name : lym
