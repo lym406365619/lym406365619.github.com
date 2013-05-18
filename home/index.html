@@ -2,7 +2,7 @@
 layout: blog-aside
 title: 博客
 ---
-{% for post in site.posts %}
+{% for post in paginator.posts %}
     <div class="post">
 	<div class="conent_collect">
 
@@ -22,3 +22,24 @@ title: 博客
 	  </dl>
     </div>
 {% endfor %}
+
+<div id="post-pagination" class="pagination">
+  {% if paginator.previous_page %}
+      {% if paginator.previous_page == 1 %}
+        <a href="{{ BASE_PATH }}/" class="previous">第一页</a>
+      {% else %}
+        <a href="{{ BASE_PATH }}/page{{paginator.previous_page}}" class="previous">前一页</a>
+      {% endif %}
+  {% else %}
+    <span class="previous disabled">起点</span>
+  {% endif %}
+
+  <span class="current-page">{{ paginator.page }}</span>
+
+  {% if paginator.next_page %}
+    <a href="{{ BASE_PATH }}/page{{paginator.next_page}}" class="next">后一页</a>
+  {% else %}
+    <span class="next disabled">终点</span>
+  {% endif %}
+
+</div>

@@ -8,6 +8,9 @@ markdown: rdiscount
 safe: true
 auto: true
 
+#设置分页，每页最多显示8篇博文
+paginate: 8
+
 author:
     name : lym
     email : luyueming1989@gmail.com

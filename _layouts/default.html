@@ -10,27 +10,15 @@
 <div id="all">
 
   <div class="main">
-    
-    <header class="hd">
-      <h1> LYM -- 放浪形骸，踏歌雾霭；君心可晴，且歌且行 </h1>
-      <nav class="main-nav">
-        <ul>
-	  <li><a href="/"><strong>主页</strong></strong></li>
-	  <li><a href="/blog.html"><strong>博客</strong></a></li>
-	  <li><a href="/about.html"><strong>关于我</strong></a></li>
-	  <li><a href="/contact.html"><strong>联系方式</strong></a></li>
-        </ul>
-      </nav>
-    </header>
+    {% include header.html %}   
   </div>
   
   <div class="cont" id="blog">
       {{ content }}
   </div>
 
-  <div class="ft">
-      <p>版权所有：LYM</p>
-  </div>
+  {% include footer.html %}  
+
 </div>
 </body>
 </html>

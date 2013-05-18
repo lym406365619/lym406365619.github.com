@@ -572,4 +572,55 @@ code {
 }
 
 
+/*--------------*/
+.pagination {
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(30, 144, 255);
+}
+
+#post-pagination {
+    background: none repeat scroll 0% 0% rgb(245, 245, 220);
+    margin: 0px 20px;
+}
+
+#post {
+    background: none repeat scroll 0% 0% transparent;
+    margin: 0px 0px 20px;
+}
+
+.previous {
+    float: left;
+}
+
+a.previous {
+    text-decoration: none;
+    color: rgb(30,144,255);
+}
+
+a.previous:hover {
+    text-decoration: underline;
+}
+
+.disabled {
+    color: rgb(144, 144, 144);
+}
+
+.current-page {
+    font-weight: bold;
+}
+
+.next {
+    float: right;
+}
+
+a.next {
+    text-decoration: none;
+    color: rgb(30,144,255);
+}
+
+a.next:hover {
+    text-decoration: underline;
+}
 

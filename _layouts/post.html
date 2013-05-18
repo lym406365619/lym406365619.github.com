@@ -15,7 +15,22 @@
   
   <div class="cont">
       <div class="post_cont">
-          {{ content }}
+        {{ content }}
+          
+	<div id="post" class="pagination">
+	  {% if page.next %}
+	    <a href="{{ BASE_PATH }}{{ page.next.url}}" title="{{ page.next.title }}" class="previous">&larr;上一篇</a>
+	  {% else %}
+	    <span class="previous disabled">这已经是最后一篇了</span>   
+	  {% endif %}
+
+	  {% if page.previous %}
+	    <a href="{{ BASE_PATH }}{{ page.previous.url}}" title="{{ page.previous.title }}" class="next">下一篇&rarr;</a>
+	  {% else %}
+	    <span class="next disabled">这已经是第一篇了</span>
+	  {% endif %}
+	</div>
+
       </div>
   </div>
 

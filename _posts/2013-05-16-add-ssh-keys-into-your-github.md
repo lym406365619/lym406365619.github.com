@@ -42,7 +42,7 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
     <span class="command">$ gedit ~/.ssh/id_rsa.pub</span>
 </pre>
 
-接着拷贝<code>id_rsa.pub</code>文件内的所有内容，粘贴到github帐号管理中的添加SSH界面中。登录你的Github张后后
+接着拷贝<code>id_rsa.pub</code>文件内的所有内容，粘贴到github帐号管理中的添加SSH界面中。登录你的Github帐号后
 
   1） 点击右上方的Accounting settings图标
 
