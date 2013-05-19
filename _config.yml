@@ -1,24 +1,37 @@
-permalink: /blog/:year/:month/:day/:title
+permalink : /blog/:year/:month/:day/:title
 
 #使用pygments高亮代码
 #使自定义的插件无效
 #文件发生变动，重新组织工程内容
-pygments: true
-markdown: rdiscount
-safe: true
-auto: true
+pygments : true
+markdown : rdiscount
+safe : true
+auto : true
 
 #设置分页，每页最多显示8篇博文
-paginate: 8
+paginate : 8
 
-author:
-    name : lym
-    email : luyueming1989@gmail.com
-    github : https://github.com/lym406365619
+author :
+  name : lym
+  email : luyueming1989@gmail.com
+  github : https://github.com/lym406365619
+
+production_url : http://lym406365619.github.io
 
 #设置标签、分类等路径
 JB :
-    BASE_PATH : false
-    categories_path : /categories.html
-    tags_path : /tags.html
-    archive_path : /archive.html
+  BASE_PATH : false
+  categories_path : /categories.html
+  tags_path : /tags.html
+  archive_path : /archive.html
+  atom_path : /atom.xml
+#    rss_path : /rss.xml
+
+  analytics :
+    provider : google
+#    google :
+#      tracking_id : 'UA-41041953-1'
+#    getclicky :
+#      site_id :
+#    mixpanel :
+#        token : '_MIXPANEL_TOKEN_'
