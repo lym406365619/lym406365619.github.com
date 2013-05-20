@@ -29,8 +29,8 @@ JB :
 
   analytics :
     provider : google
-#    google :
-#      tracking_id : 'UA-41041953-1'
+    google :
+      tracking_id : 'UA-41041953-1'
 #    getclicky :
 #      site_id :
 #    mixpanel :
