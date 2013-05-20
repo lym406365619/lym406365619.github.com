@@ -56,7 +56,7 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
 
 如下图所示：
 
-<img src="/img/blog/git_ssh.png" class="pic"></img>
+<img src="/img/blog/git_ssh.png" width="600px" height="459px" class="pic"></img>
 
 添加过程github会提示你输入一次你的github密码。
 

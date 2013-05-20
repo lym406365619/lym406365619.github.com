@@ -23,10 +23,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
 }
 
-a {
-    text-decoration: none
-}
-
 a:hover {
     text-decoration: underline;
 }
@@ -194,7 +190,7 @@ nav ul {
 .conent_collect {
     float: left;
     width: 500px;
-    padding: 0px 15px 15px;
+    padding: 0px 0px 15px;
 }
 
 .content_info {
@@ -203,9 +199,9 @@ nav ul {
     line-height: 160%;
     float: left;
     display: inline;
-/*    width: 140px;*/
     padding: 0px 0px 10px;
-    margin: 20px 0px 0px;
+    margin: 10px 0px;
+    width: 160px;
 }
 
 .post h3 {
@@ -650,5 +646,25 @@ a.next:hover {
 
 .result h3 a {
     color: rgb(30, 144, 255);
+    text-decoration: none;
+}
+
+/*------------*/
+.highlight {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3) inset, 0px 1px 0px rgba(255, 255, 255, 0.1), 0px -1px 0px rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+    border-radius: 5px 5px 5px 5px;
+    color: rgb(255, 255, 255);
+    font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+    margin: 0px 30px;
+}
+
+.text {
+    box-shadow: none;
+}
+
+.highlight em {
+    color: rgb(24, 254, 100);
+    font-style: italic;
 }
 
