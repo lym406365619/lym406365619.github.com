@@ -2,6 +2,19 @@
     word-wrap: break-word;
 }
 
+table {
+    margin: 10px 35px;
+}
+
+th {
+    background: none repeat scroll 0% 0% rgb(221, 221, 221);
+}
+
+td, th {
+    padding: 5px 10px;
+    border: 1px solid rgb(136, 136, 136);
+}
+
 body {
   font-family: 'Microsoft YaHei',微软雅黑,宋体，Tahoma,Helvetica,'SimSun',sans-serif;
   /*
@@ -666,6 +679,18 @@ a.next:hover {
 .highlight em {
     color: rgb(24, 254, 100);
     font-style: italic;
+}
+
+.highlight .ck {
+    color: rgb(200, 0, 0);
+}
+
+.highlight .jk {
+    color: rgb(100, 0, 0);    
+}
+
+.highlight .jm {
+    color: rgb(255, 0, 0);    
 }
 
 /*----------------*/
