@@ -693,10 +693,22 @@ a.next:hover {
     color: rgb(255, 0, 0);    
 }
 
+.highlight .nt {
+    color: rgb(0, 200, 101);
+}
+
 /*----------------*/
 #copyright {
     margin: 20px 0px;
     border: 2px solid rgb(150, 150, 150);
     border-radius: 10px;
+}
+
+.contact {
+    margin: 0px 25px;
+}
+
+.about {
+    margin: 0px 25px;
 }
 

@@ -2,7 +2,7 @@
 layout: post
 title: 如何在Github托管网站中添加谷歌分析（Google Analytics）——异步跟踪
 categories: [Github]
-tags: [Google, Analytics, ssh, tracking_id, 异步跟踪, Firefox]
+tags: [Google, Analytics, SEO, tracking_id, 异步跟踪, Firefox]
 description: 首先了解一下什么是谷歌分析，进入中文官网请点击这里。当拥有自己个人网站的时候，我们就可以利用它来评估广告的投资回报率，并对您的Flash、视频以及社交网络网站和应用进行跟踪等功能。这里我主要介绍如何在Github上配置Google分析
 ---
 {% include JB/setup %}
