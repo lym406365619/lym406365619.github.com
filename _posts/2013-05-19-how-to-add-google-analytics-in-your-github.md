@@ -72,7 +72,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
     <code class="text">&#60;script type="text/javascript">
 
   <span class="jk">var</span> _gaq = _gaq || [];
-  _gaq.<span class="jm">push</span>([<span class="jv">'_setAccount'</span>, <span class="jv">'{{ site.JB.analytics.google.tracking_id }}'</span>]);
+  _gaq.<span class="jm">push</span>([<span class="jv">'_setAccount'</span>, <span class="jv">'<strong><i>&#123;{ site.JB.analytics.google.tracking_id }}</i></strong>'</span>]);
   _gaq.<span class="jm">push</span>(['_trackPageview']);
 
   (<span class="jk">function</span>() {
@@ -83,7 +83,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 
 &#60;/script></code></pre>
 </div>
-
+其中上述蓝色斜粗体可以代替成你获得的<code>tracking_id</code>。如果你不代替，必须在配置文件_config.yml中配置相关属性，如上所述。
 
 ##4 调试、检测谷歌异步跟踪
 Google分析官方提供了[跟踪代码问题指导](https://developers.google.com/analytics/resources/articles/gaTrackingTroubleshooting?hl=zh-CN)，列出常见的跟踪代码错误、常见报告数据问题以及调试方法。
