@@ -13,7 +13,7 @@ paginate : 8
 
 title : lym的博客
 author :
-  name : lym
+  name : Yueming Lu
   email : luyueming1989@gmail.com
   github : https://github.com/lym406365619
 
@@ -26,7 +26,7 @@ JB :
   tags_path : /tags.html
   archive_path : /archive.html
   atom_path : /atom.xml
-#    rss_path : /rss.xml
+  rss_path : /rss.xml
 
   analytics :
     provider : google
