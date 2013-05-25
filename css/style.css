@@ -148,9 +148,9 @@ nav ul {
 .frame_right {
     float: right;
     display: inline;
-    width: 700px;
-    margin: 15px 10px 0px 0px; 
-    overflow: auto;  /* important */
+    width: 695px;
+    overflow: auto;
+    margin: 15px 25px 0px 0px;
 }
 
 .block {
@@ -195,11 +195,10 @@ nav ul {
 /*---------------*/
 .post {
     display: block;
-    overflow: auto;  /* important */
+    overflow: auto;
     border-bottom: 2px solid rgb(20, 20, 20);
-    padding: 10px 0px 0px 0px;
     background: none repeat scroll 0% 0% rgb(245, 245, 220);
-    margin: 0px 20px;
+    padding: 10px 0px 0px;
 }
 
 .conent_collect {
@@ -215,8 +214,8 @@ nav ul {
     float: left;
     display: inline;
     padding: 0px 0px 10px;
-    margin: 10px 0px;
-    width: 160px;
+    margin: 10px 0px 0px 10px;
+    width: 180px;
 }
 
 .post h3 {
@@ -549,6 +548,10 @@ pre.command-line .comment {
     color: rgb(204, 204, 204);
 }
 
+pre.command-line .output {
+    color: rgb(99, 228, 99);
+}
+
 pre span {
     white-space: pre-wrap;
 }
@@ -597,7 +600,6 @@ code {
 
 #post-pagination {
     background: none repeat scroll 0% 0% rgb(245, 245, 220);
-    margin: 0px 20px;
 }
 
 #post {

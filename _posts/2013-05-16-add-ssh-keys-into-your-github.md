@@ -2,7 +2,7 @@
 layout: post
 title: Github项目添加SSH公钥
 categories: [Github]
-tags: [git, ssh]
+tags: [git, SSH]
 description: 在使用git clone命令时，如果你使用的操作系统未在Github网站上添加SSH公钥时，比如拷贝jekyll-bootstrap项目，使用命令git clone git@github.com:plusjade/jekyll-bootstrap.git。系统会报如下错误
 ---
 {% include JB/setup %}

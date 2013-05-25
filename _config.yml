@@ -5,7 +5,7 @@ permalink : /blog/:year/:month/:day/:title
 #文件发生变动，重新组织工程内容
 pygments : true
 markdown : rdiscount
-safe : true
+#safe : true
 auto : true
 
 #设置分页，每页最多显示8篇博文
