@@ -709,8 +709,17 @@ a.next:hover {
 }
 
 .about {
-    margin: 0px 25px;
+    margin: 15px 25px 0px;
     background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
+
+.contact {
+    padding: 20px;
+}
+
+.contact h4 {
+    font-size: 20px;
+    color: rgb(120, 192, 238);
 }
 
 /*-----------------*/
@@ -737,6 +746,10 @@ a.next:hover {
 	transition: background 200ms linear;
 	-webkit-backface-visibility: hidden;
 }
-	#scrollUp:hover {
-		background: #000;
-	}
+
+#scrollUp:hover {
+	background: #000;
+}
+
+
+
