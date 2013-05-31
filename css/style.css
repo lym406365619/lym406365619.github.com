@@ -712,3 +712,31 @@ a.next:hover {
     margin: 0px 25px;
     background: none repeat scroll 0% 0% rgb(255, 255, 255);
 }
+
+/*-----------------*/
+#scrollUp-active{
+    display: none;
+}
+
+/* Pill style */
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	background: #555;
+	color: #fff;
+	font-size: 14px;
+	font-family: sans-serif;
+	text-decoration: none;
+	opacity: .9;
+	padding: 10px 20px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	-webkit-transition: background 200ms linear;
+	-moz-transition: background 200ms linear;
+	transition: background 200ms linear;
+	-webkit-backface-visibility: hidden;
+}
+	#scrollUp:hover {
+		background: #000;
+	}
