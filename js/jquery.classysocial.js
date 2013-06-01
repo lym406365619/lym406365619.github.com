@@ -62,8 +62,8 @@ ClassySocial = function(e) {
     };
     var data = {
         bubble: {
-            holder: '<a class="main" title="Find Me Here" alt="Find Me Here">' + '<img src="[IMAGE_URL]" title="Find Me Here" alt="Find Me Here"/>' + "</a>" + '<div class="network_holder ' + y + '"></div>',
-            network_button: '<a class="network_button [NETWORK]" target="_blank" href="[URL]" data-network="[NETWORK]">[NAME]</a>',
+            holder: '<a class="main">' + '<img src="[IMAGE_URL]" class="tooltip" title="请点击" alt="请点击"/>' + "</a>" + '<div class="network_holder ' + y + '"></div>',
+            network_button: '<a class="network_button [NETWORK] tooltip" title="[NAME]" target="_blank" href="[URL]" data-network="[NETWORK]">[NAME]</a>',
             orientations: {
                 arc: function() {
                     if ($(this).hasClass("disabled")) {
