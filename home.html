@@ -2,12 +2,24 @@
 layout: default
 title: 主页
 ---
-<section class="pic">
-  <img src="/img/home.jpg" width="960px" height="676px" alt="lym的博客"/>
-</section>
+<div id="wrapper" class="pic">
+  <div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+      <img src="/img/home/seaside.jpg" data-thumb="/img/home/seaside.jpg" alt="" />
+        <a href="http://lym406365619.github.io"><img src="/img/home/mountain.jpg" data-thumb="/img/home/mountain.jpg" alt="" /></a>
+      <img src="/img/home/weiminghu.jpg" data-thumb="/img/home/weiminghu.jpg" alt="" />
+                <!--<img src="/img/walle.jpg" data-thumb="/img/walle.jpg" alt="" data-transition="slideInLeft" />
+                <img src="/img/home/weiminghu.jpg" data-thumb="/img/home/weiminghu.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. -->
+    </div>
+  </div>
+</div>
 
-<section class="picd">
-  <p>
-  欢迎来到我的博客。
-  </p> 
-</section>
+<script type="text/javascript" src="/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+  $(window).load(function() {
+    $('#slider').nivoSlider();
+  });
+</script>

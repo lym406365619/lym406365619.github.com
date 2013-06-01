@@ -128,7 +128,7 @@ nav ul {
 /*-------------------*/
 .pic {
     text-align: center;
-    margin: 15px;
+    margin: 15px 20px 0px 20px;
 }
 
 .picd {
@@ -199,6 +199,11 @@ nav ul {
     border-bottom: 2px solid rgb(20, 20, 20);
     background: none repeat scroll 0% 0% rgb(245, 245, 220);
     padding: 10px 0px 0px;
+}
+
+.post:hover {
+    background: none repeat scroll 0% 0% rgb(255, 255, 220);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .conent_collect {
