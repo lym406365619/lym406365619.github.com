@@ -10,12 +10,12 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
 #Github项目添加SSH公钥
 
 ##1 测验SSH公钥是否添加到Github账户中
-在使用<code>git clone</code>命令时，如果你使用的操作系统未在Github网站上添加SSH公钥，比如拷贝[jekyll-bootstrap](http://jekyllbootstrap.com)项目，使用命令<code>git clone git@github.com:plusjade/jekyll-bootstrap.git</code>。系统会报如下错误：
+在使用<code class="cd">git clone</code>命令时，如果你使用的操作系统未在Github网站上添加SSH公钥，比如拷贝[jekyll-bootstrap](http://jekyllbootstrap.com)项目，使用命令<code class="cd">git clone git@github.com:plusjade/jekyll-bootstrap.git</code>。系统会报如下错误：
 <pre class="command-line">
     <span class="command">Permission denied (publickey).</span>
     <span class="command">fatal: The remote end hung up unexpectedly</span>
 </pre>
-或者你可以使用<code>ssh</code>命令连接github.com的SSH服务，登录用户名为git（所有GitHub用户共享此SSH用户名，不要写成其他），测试如下
+或者你可以使用<code class="cd">ssh</code>命令连接github.com的SSH服务，登录用户名为git（所有GitHub用户共享此SSH用户名，不要写成其他），测试如下
 <pre class="command-line">
     <span class="command">$ ssh -T git@github.com</span>
     <span class="command">Permission denied (publickey).</span>
@@ -32,17 +32,17 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
 
 然后提示输入passphrase（密码），输入两次（可以不输直接两次Enter）；
 
-然后会在.ssh目录生产两个文件：<code>id_rsa</code>和<code>id_rsa.pub</code>。
+然后会在.ssh目录生产两个文件：<code class="cd">id_rsa</code>和<code class="cd">id_rsa.pub</code>。
 
-其中~/.ssh/id_rsa是私钥文件，~/.ssh/id_rsa.pub是公钥文件。注意私钥文件要严加保护，不能泄露给任何人。如果在执行<code>ssh-keygen</code>命令时选择了使用口令保护私钥，私钥文件是经过加密的。至于公钥文件~/.ssh/id_rsa.pub则可以放心地公开给他人。
+其中~/.ssh/id_rsa是私钥文件，~/.ssh/id_rsa.pub是公钥文件。注意私钥文件要严加保护，不能泄露给任何人。如果在执行<code class="cd">ssh-keygen</code>命令时选择了使用口令保护私钥，私钥文件是经过加密的。至于公钥文件~/.ssh/id_rsa.pub则可以放心地公开给他人。
 
 ##3 添加SSH公钥
-使用文本编辑工具打开公钥文件~/.ssh/id_rsa.pub，可以使用<code>gedit</code>、<code>cat</code>、<code>vim</code>等编辑器，这里我使用<code>gedit</code>打开:
+使用文本编辑工具打开公钥文件~/.ssh/id_rsa.pub，可以使用<code class="cd">gedit</code>、<code class="cd">cat</code>、<code class="cd">vim</code>等编辑器，这里我使用<code class="cd">gedit</code>打开:
 <pre class="command-line">
     <span class="command">$ gedit ~/.ssh/id_rsa.pub</span>
 </pre>
 
-接着拷贝<code>id_rsa.pub</code>文件内的所有内容，粘贴到github帐号管理中的添加SSH界面中。登录你的Github帐号后
+接着拷贝<code class="cd">id_rsa.pub</code>文件内的所有内容，粘贴到github帐号管理中的添加SSH界面中。登录你的Github帐号后
 
   1） 点击右上方的Accounting settings图标
 

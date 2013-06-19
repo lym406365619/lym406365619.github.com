@@ -65,9 +65,9 @@ title : Atom Feed
    <code class="text"><span class="nt">&lt;link</span> href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"<span class="nt">></span></code></pre>
 </div>
 
-若果你已经含有<code>atom.xml</code>这个文件，在格式<code>entry</code>里添加<code>summary</code>，也就是每篇博客的摘要部分。下面我介绍一下上面需要注意的几个注意事项：
+若果你已经含有<code class="cd">atom.xml</code>这个文件，在格式<code class="cd">entry</code>里添加<code class="cd">summary</code>，也就是每篇博客的摘要部分。下面我介绍一下上面需要注意的几个注意事项：
 
-1）首先得现在你的配置文件<code>_config.yml</code>中配置一下属性site.production_url、site.JB.atom_path、site.author.name、site.author.email，不然就无法使用这些参数属性，可能会影响后面搜索功能的使用。如果你不想设置，可以直接在上面选项中填写，比如&#123;{ site.title }}可以写一个你自己喜欢的名称。以下是我设置的内容，可以参考一下：
+1）首先得现在你的配置文件<code class="cd">_config.yml</code>中配置一下属性site.production_url、site.JB.atom_path、site.author.name、site.author.email，不然就无法使用这些参数属性，可能会影响后面搜索功能的使用。如果你不想设置，可以直接在上面选项中填写，比如&#123;{ site.title }}可以写一个你自己喜欢的名称。以下是我设置的内容，可以参考一下：
 <div class="highlight">
   <pre>
     <code class="text">title : lym的博客
@@ -102,20 +102,20 @@ Tapir的官网为[http://tapirgo.com](http://tapirgo.com/)，进入官网后，�
 <span class="nt">&lt;/form></span></code></pre>
 </div>
 
-由于搜索用到了JQuery，需要加入两个JS文件<code>jquery.min.js</code>和<code>jquery-tapir.min.js</code>。由于search.html是在加载时执行搜索，所以这两个JS文件必须在header中加载，我的代码如下：
+由于搜索用到了JQuery，需要加入两个JS文件<code class="cd">jquery.min.js</code>和<code class="cd">jquery-tapir.min.js</code>。由于search.html是在加载时执行搜索，所以这两个JS文件必须在header中加载，我的代码如下：
 <div class="highlight">
   <pre>
     <code class="text">&lt;script src="&#123;{ BASE_PATH }}/js/jquery-1.6.1.min.js"></script>
 &lt;script src="&#123;{ BASE_PATH }}/js/jquery-tapir.min.js"></script></code></pre>
 </div>
 
-你可以在Github上下载这两个文件，使用<code>git clone</code>命令
+你可以在Github上下载这两个文件，使用<code class="cd">git clone</code>命令
 <pre class="command-line">
   <span class="command">$ git clone git@github.com:TapirGo/jquery-plugin.git</span>
 </pre>
 ##4 创建search.html
 
-由于上面的action为<code>search.html</code>。在根目录下创建该文件，内容如下：
+由于上面的action为<code class="cd">search.html</code>。在根目录下创建该文件，内容如下：
 <div class="highlight">
   <pre>
     <code class="text">---

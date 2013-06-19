@@ -38,7 +38,7 @@ ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.
 </pre>
 
 ##3 运行git clone HTTPS出现的错误及解决办法
-在使用<code>git clone</code>命令时，使用https链接进行clone时，可能会出现以下[错误](https://help.github.com/articles/https-cloning-errors)：
+在使用<code class="cd">git clone</code>命令时，使用https链接进行clone时，可能会出现以下[错误](https://help.github.com/articles/https-cloning-errors)：
 <pre class="command-line">
     <span class="output">error: The requested URL returned error: 401 while accessing</span>
     <span class="output">https://github.com/<em>user</em>/<em>repo</em>.git/info/refs?service=git-receive-pack</span>

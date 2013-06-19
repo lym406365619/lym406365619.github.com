@@ -23,7 +23,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 
 ###------设置tracking_id
 
-打开<code>&#95;config.yml</code>配置文件，设置一下JB/analytics下的google的tracking-id，如下所示:
+打开<code class="cd">&#95;config.yml</code>配置文件，设置一下JB/analytics下的google的tracking-id，如下所示:
 <div class="highlight">
   <pre>
     <code class="text">JB :
@@ -32,16 +32,16 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
     google : 
     tracking_id : '<em>your id</em>'</code></pre>
 </div>
-然后再向你需要运用Google分析的网站添加你刚才生成的javascript的跟踪代码。这样就能实现google分析跟踪设置。由于我想在我二级域名下的所有发表的博文都用google进行代码分析。因此参考[Jekyll Bootstrap](https://github.com/plusjade/jekyll-bootstrap)的设置，如果你本来就利用它的框架源码，就不要设置以下内容，只需改变一下上文中的跟踪ID即可。如果你设计了自己的主题框架，在需要进行google分析的页面中添加以下源码。比如我在<code>&#95;layout</code>下的default.html和post.html中添加如下代码：
+然后再向你需要运用Google分析的网站添加你刚才生成的javascript的跟踪代码。这样就能实现google分析跟踪设置。由于我想在我二级域名下的所有发表的博文都用google进行代码分析。因此参考[Jekyll Bootstrap](https://github.com/plusjade/jekyll-bootstrap)的设置，如果你本来就利用它的框架源码，就不要设置以下内容，只需改变一下上文中的跟踪ID即可。如果你设计了自己的主题框架，在需要进行google分析的页面中添加以下源码。比如我在<code class="cd">&#95;layout</code>下的default.html和post.html中添加如下代码：
 
 <div class="highlight">
   <pre>
     <code class="text">&#123;% include JB/analytics %}</code></pre>
 </div>
 
-注意：&#123;% include JB/analytics %}应放在相应网页作为结束标记的<code>&#60;/head></code>标记之前，且紧邻该标记。如果您的网站是使用模板来生成网页，请将代码段添加到包含<code>&#60;head></code>部分的文件中，放在作为结束标记的 <code>&#60;/head></code>标记之前，且紧邻该标记。要在所有浏览器中都获得最佳效果，当在网站中加入其他脚本时，建议您采用以下两种方式之一：
+注意：&#123;% include JB/analytics %}应放在相应网页作为结束标记的<code class="cd">&#60;/head></code>标记之前，且紧邻该标记。如果您的网站是使用模板来生成网页，请将代码段添加到包含<code class="cd">&#60;head></code>部分的文件中，放在作为结束标记的 <code class="cd">&#60;/head></code>标记之前，且紧邻该标记。要在所有浏览器中都获得最佳效果，当在网站中加入其他脚本时，建议您采用以下两种方式之一：
 
-1） 放到HTML<code>&#60;/head></code>部分的跟踪代码段之前；
+1） 放到HTML<code class="cd">&#60;/head></code>部分的跟踪代码段之前；
 
 2） 在跟踪代码段与所有网页内容之后（如置于HTML正文的底部）。
 
@@ -63,10 +63,10 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 
 &#123;% <span class="ck">endif</span> %}</code></pre>
 </div>
-因为之前<code>&#95;config.yml</code>配置文件中设置为google，所以应该执行JB/analytics-providers/google里面的代码。下面应该是添加JavaScript代码里。
+因为之前<code class="cd">&#95;config.yml</code>配置文件中设置为google，所以应该执行JB/analytics-providers/google里面的代码。下面应该是添加JavaScript代码里。
 
 ###------设置JavaScript代码
-刚开始我把之前生成的JavaScript代码复制到<code>&#95;include/JB/analytics-providers/google</code>里面，但这个时候问题出现了，我利用谷歌调试工具进行测试，发现代码没有生效（一会我会告诉大家如何知道自己的跟踪已经设置成功了），不知道什么原因，而且我也是按照官方的设置进行部署的。于是我就使用JB使用的异步跟踪设置方式，发现测试成功。代码如下：
+刚开始我把之前生成的JavaScript代码复制到<code class="cd">&#95;include/JB/analytics-providers/google</code>里面，但这个时候问题出现了，我利用谷歌调试工具进行测试，发现代码没有生效（一会我会告诉大家如何知道自己的跟踪已经设置成功了），不知道什么原因，而且我也是按照官方的设置进行部署的。于是我就使用JB使用的异步跟踪设置方式，发现测试成功。代码如下：
 <div class="highlight">
   <pre>
     <code class="text">&#60;script type="text/javascript">
@@ -83,7 +83,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 
 &#60;/script></code></pre>
 </div>
-其中上述蓝色斜粗体可以代替成你获得的<code>tracking_id</code>。如果你不代替，必须在配置文件_config.yml中配置相关属性，如上所述。
+其中上述蓝色斜粗体可以代替成你获得的<code class="cd">tracking_id</code>。如果你不代替，必须在配置文件_config.yml中配置相关属性，如上所述。
 
 ##4 调试、检测谷歌异步跟踪
 Google分析官方提供了[跟踪代码问题指导](https://developers.google.com/analytics/resources/articles/gaTrackingTroubleshooting?hl=zh-CN)，列出常见的跟踪代码错误、常见报告数据问题以及调试方法。
@@ -111,9 +111,9 @@ IE/Sarari/Firefox | [Charles](http://www.xk72.com/charles/download.php)
 
 <strong>第四步：</strong>打开含有Google分析跟踪插件的页面，即你要检测的页面。如果你之前已经打开了，刷新页面就行；
 
-<strong>第五步：</strong>在刷新进入页面后，验证页面是否对<code>urchin.js</code>或者<code>ga.js</code>发出请求；
+<strong>第五步：</strong>在刷新进入页面后，验证页面是否对<code class="cd">urchin.js</code>或者<code class="cd">ga.js</code>发出请求；
 
-<strong>第六步：</strong>检查是否对<code>_utm.gif</code>发出请求。
+<strong>第六步：</strong>检查是否对<code class="cd">_utm.gif</code>发出请求。
 
 如果实现上述步骤里，说明你的追踪设置应该没有问题。
 
