@@ -2,7 +2,7 @@
 layout: post
 title: Hibernate4中buildSessionFactory()方法过时解决方案
 categories: [Java]
-tags: [hibernate, session, deprecated, buildsessionfactory, 设计模式]
+tags: [Hibernate, session, deprecated, buildSessionFactory, 设计模式]
 description: 在使用Hibernate4时，我们会发现hibernate中的buildSessionFactory()方法已经过时了，官网建议使用 buildSessionFactory(ServiceRegistry)这个方法代替使用。下面代码为解决过时的代码，并采用了单例设计模式，并且是懒汉式单例类。与饿汉式单例类不同的是，懒汉式单例类在第一次被引用时将自己实例化
 ---
 {% include JB/setup %}
