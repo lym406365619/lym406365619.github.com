@@ -50,14 +50,14 @@ a:hover {
 .hd { 
   color: #1E90FF; 
   text-align: center; 
-  text-shadow: 0 1px 1px #222; 
-  height: 120px;
+  text-shadow: 1px -1px 0px #222; 
+  height: 95px;
   background: url("/img/header.jpg") no-repeat center 0px;
 }
 
 .hd h1 {
-  font-size: 36px;
-  padding: 16px 0; 
+  font-size: 32px;
+  padding: 10px 0; 
 }
 
 .main-nav {
@@ -170,6 +170,15 @@ nav ul {
     font-weight: 700;
     line-height: 32px;
     overflow: hidden;
+}
+
+.block .title a {
+    color: rgb(240, 133, 25);
+    text-decoration: none;
+}
+
+.block .title a:hover {
+    text-decoration: underline;
 }
 
 .block .dxb_bc {
@@ -651,18 +660,11 @@ a.next:hover {
 }
 
 /* --------- */
-.navbar-search {
-    padding: 0px 0px 0px 250px;
-}
-
-.search-query {
+.search-query {hd
     color: rgb(51, 51, 51);
-    background-color: rgb(250, 250, 250);
     border-color: rgb(17, 17, 17);
     padding: 4px 14px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 15px;
-    border-radius: 15px 15px 15px 15px;
+    font-size: 20px;
 }
 
 .result {

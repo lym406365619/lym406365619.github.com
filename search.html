@@ -4,12 +4,16 @@ title: 搜索结果
 ---
 {% include JB/setup %}
 <div class="post_cont">
+  <form class="navbar-search" action="{{ BASE_PATH }}/search.html" method="get">
+    <input name="query" type="text" class="search-query" placeholder="搜索">
+  </form>
+
   <h1>搜索结果</h1>
 
   <div id="search_results">
   </div>
   <script>
-    $('#search_results').tapir({'token': '519992c33f61b05b19000d6f'});
+    $('#search_results').tapir({'token': '51c901836854880100000162'});
     /** with http  token=519992c33f61b05b19000d6f **/
     /** without http  token=519763213f61b05b2000040b  **/
   </script>

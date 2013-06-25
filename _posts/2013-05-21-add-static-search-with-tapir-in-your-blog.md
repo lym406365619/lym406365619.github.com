@@ -76,7 +76,7 @@ author :
   email : luyueming1989@gmail.com
   github : https://github.com/lym406365619
 
-production_url : http://lym406365619.github.io
+production_url : http://luyueming.info
 
 JB :
   BASE_PATH : false
@@ -88,7 +88,7 @@ JB :
 配置好RSS feed后，你可以在本地运行Jekyll，访问[http://loaclhost:4000/atom.xml](http://loaclhost:4000/atom.xml)看看你本地的RSS文件是否有问题。如果出现你所有的文章以及摘要，那说明你打配置文件没有出错。接着将你的修改好的项目提交到Github上吧。
 
 ##2 进入Tapir提交RSS feed
-Tapir的官网为[http://tapirgo.com](http://tapirgo.com/)，进入官网后，在Your RSS feed选项中填写atom.xml的访问网址，比如我的就是[http://lym406365619.github.io/atom.xml](http://lym406365619.github.io/atom.xml)。这里需要注意的是，你可以提交带有http的网址，也可以提交不含http的网址，因为生成的token并不是一样的。不过经本人测定，还是选择带有http的那个url，不然在你部署完成之后，搜索的时候可能会出现重复的两条记录，即同一篇博文出现两次。之后在下面选项填好你的E-mail地址，点击大按钮GO！就可以帮你自动生成一个token以及一个secret token。这边我们只需要记下第一个token就行，生成页面如下所示。
+Tapir的官网为[http://tapirgo.com](http://tapirgo.com/)，进入官网后，在Your RSS feed选项中填写atom.xml的访问网址，比如我的就是[http://luyueming.info/atom.xml](http://luyueming.info/atom.xml)。这里需要注意的是，你可以提交带有http的网址，也可以提交不含http的网址，因为生成的token并不是一样的。不过经本人测定，还是选择带有http的那个url，不然在你部署完成之后，搜索的时候可能会出现重复的两条记录，即同一篇博文出现两次。之后在下面选项填好你的E-mail地址，点击大按钮GO！就可以帮你自动生成一个token以及一个secret token。这边我们只需要记下第一个token就行，生成页面如下所示。
 
 <img src="/img/blog/Tapir_token.png" width="561px" height="226px" alt="Tapir生成的token" class="pic"></img>
 
@@ -137,6 +137,6 @@ title: 搜索结果
 
 上面的红色字体就是之前生成的token，用你生成的值代替它就行了。
 
-按照上述方法部署之后，应该就能在站内实现全局静态搜索了。
+按照上述方法部署之后，应该就能在站内实现全局静态搜索了。可以点击我的的搜索页面试试，网址为[http://luyueming.info/search.html](http://luyueming.info/search.html)。
 
 
