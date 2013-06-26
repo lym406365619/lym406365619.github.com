@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 《Java Web开发实战1200例》实用案例之第2章Java语言基础（1）
+title: 《Java Web开发实战1200例》实用案例之第二章Java语言基础
 categories: [Java]
-tags: [Java Web. 位运算, 浮点数, BigDecimal, 杨辉三角]
-description: 主要介绍使用位运算进行加密、精确使用浮点数——BigDecimal类、不使用第三个变量实现两个整型变量的互换、以及使用for循环输出杨辉三角四种案例，其中精确使用浮点数在银行使用的系统中是非常重要的，必须学会使用BigDecimal类中的四种基本方法
+tags: [Java Web, 位运算, 浮点数, BigDecimal, 杨辉三角, 九九乘法表]
+description: 主要介绍使用位运算进行加密，精确使用浮点数——BigDecimal类，不使用第三个变量实现两个整型变量的互换，使用for循环输出杨辉三角，使用嵌套循环输出九九乘法表，以及for循环输出空心的菱形六种案例，其中精确使用浮点数在银行使用的系统中是非常重要的，必须学会使用BigDecimal类中的四种基本方法
 ---
 {% include JB/setup %}
-#《Java Web开发实战1200例》实用案例之第2章Java语言基础（1）
+#《Java Web开发实战1200例》实用案例之第二章Java语言基础
 
 ##1 使用位运算进行加密
 
@@ -174,4 +174,105 @@ public class YanghuiTriangle {
 1    5    10   10   5    1
 1    6    15   20   15   6    1
 1    7    21   35   35   21   7    1
+{% endhighlight %}
+
+##5 使用嵌套循环输出九九乘法表
+
+Java基本语法中的for循环非常灵活并且可以嵌套使用，其中双层for循环是程序开发中使用最频繁的，常用于操作表格数据。对于行数与列数相同的表格操作比较简单，但是类似九九乘法表就不好控制了，因为它的列数要与行数对应，可以说这个表格是个三角形（在面试与等级考试中常出现这类题目）。本程序主要通过创建双层for循环来实现，第一层（外层循环）用于控制表格的行；第二层（内层循环）用于控制表格的列。程序如下：
+
+{% highlight java %}
+package info.luyueming.java;
+
+public class MultiplicationTable {
+
+	public static void main(String[] args) {
+		//循环变量从1到9
+		for(int i=1; i<=9; i++) {
+		//第二层循环控制变量与第一层最大索引相等
+			for(int j=1; j<=i; j++) {
+				//输出结果但不换行
+				System.out.print(j + "×" + i + "=" + i*j + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+}
+{% endhighlight %}
+
+运行结果如下：
+
+{% highlight yaml %}
+1×1=1
+1×2=2   2×2=4
+1×3=3   2×3=6   3×3=9
+1×4=4   2×4=8   3×4=12  4×4=16
+1×5=5   2×5=10  3×5=15  4×5=20  5×5=25
+1×6=6   2×6=12  3×6=18  4×6=24  5×6=30  6×6=36
+1×7=7   2×7=14  3×7=21  4×7=28  5×7=35  6×7=42  7×7=49
+1×8=8   2×8=16  3×8=24  4×8=32  5×8=40  6×8=48  7×8=56  8×8=64
+1×9=9   2×9=18  3×9=27  4×9=36  5×9=45  6×9=54  7×9=63  8×9=72  9×9=81
+{% endhighlight %}
+
+##6 for循环输出空心的菱形
+本实例在输出菱形的基础上加大难度，输出空心的菱形图案，程序如下：
+
+{% highlight java %}
+package info.luyueming.java;
+
+public class Diamond {
+
+	public static void main(String[] args) {
+		printHollowRhombus(10);
+	}
+
+	public static void printHollowRhombus(int size) {
+		if(size % 2 == 0) {
+			size ++;	//计算菱形的大小
+		}
+		
+		for(int i=0; i<size/2+1; i++) {
+			for(int j=size/2+1; j>i+1; j--) {
+				System.out.print(" ");		//输出左上角的空白
+			}
+			for(int j=0; j<2*i+1; j++) {
+				if(j == 0 || j == 2*i) {
+					System.out.print("*");	//输出菱形上半部边缘
+				} else {
+					System.out.print(" ");	//输出菱形上半部空心
+				}
+			}
+			System.out.println();
+		}
+		
+		for(int i=size/2+1; i<size; i++) {
+			for(int j=0; j<i-size/2; j++) {
+				System.out.print(" ");		//输出左下角的空白
+			}
+			for(int j=0; j<2*size-1-2*i; j++) {
+				if(j == 0 || j == 2*(size-i-1)) {
+					System.out.print("*");	//输出菱形下半部边缘
+				} else {
+					System.out.print(" ");	//输出菱形下半部空心
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+}
+{% endhighlight %}
+输出结果如下：
+{% highlight java %}
+     *
+    * *
+   *   *
+  *     *
+ *       *
+*         *
+ *       *
+  *     *
+   *   *
+    * *
+     *
 {% endhighlight %}
