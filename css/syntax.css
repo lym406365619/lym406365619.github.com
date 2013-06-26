@@ -36,7 +36,7 @@ code {
 .highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
 .highlight .m { color: #009999 } /* Literal.Number */
 	.highlight .n { color: #333333 } /* Name */
-.highlight .s { color: #d14 } /* Literal.String */
+	.highlight .s { color: #d20; background-color: #fff0f0; } /* Literal.String */
 	.highlight .na { color: #336699 } /* Name.Attribute */
 .highlight .nb { color: #0086B3 } /* Name.Builtin */
 	.highlight .nc { color: #bb0066; font-weight: bold } /* Name.Class */
