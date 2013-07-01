@@ -19,7 +19,7 @@ description: 这一章主要要介绍了HTML/CSS技术，包括页面效果、�
 
 文字特效和图片滤镜特效主要介绍了CSS样式中的glow滤镜、dropshadow滤镜、shadow滤镜、light滤镜等的用法。
 
-##1 网页换肤
+##2 网页换肤
 
 在实现网页换肤时，如果需要在换肤后保持网页的风格，即使关闭浏览器也不会消失，这就需要将每次执行所调用的CSS样式文件的路径信息保存到客户端的Cookie中。实现换肤的几个步骤
 
@@ -79,7 +79,7 @@ function change(type) {
 <a href="#" onClick="change('gray')">灰色畅想</a>
 {% endhighlight %}
 
-##2 滚动文字
+##3 滚动文字
 实现滚动文字的特效，主要在页面中应用<code class="cd">&lt;marquee></code>标签。通过该标签的属性可以实现不同的滚动效果，其中最常用的属性是<code class="cd">direction</code>(滚动的方向)、<code class="cd">behavior</code>(滚动的方式)、<code class="cd">scrollamount</code>(滚动的速度)。
 
 比如下面的代码：
@@ -94,7 +94,7 @@ function change(type) {
 	滚动中......
 </marquee>
 
-##3 CSS控制绝对定位
+##4 CSS控制绝对定位
 在CSS中提供了灵活的定位方法，常用的定位属性包括position、left、top、width、height等，其中<code class="cd">position</code>属性就是实现绝对定位的关键属性，它采用了3中定位方式，包括绝对定位（absolute）、相对定位（relative）和静态定位（static）。CSS代码如下：
 {% highlight css %}
 #top_Div {
