@@ -134,9 +134,9 @@ interface Alarm {
 }
 
 class Alarm Door extends Door implements Alarm {
-	void open(){/*...*/}
-	void close(){/*...*/}
-	void alarm(){/*...*/}
+	void open() {/*...*/}
+	void close() {/*...*/}
+	void alarm() {/*...*/}
 }
 {% endhighlight %}
 这种实现方式基本上能够明确的反映出我们对于问题领域的理解，正确的揭示我们的设计意图。其实<strong>abstract class</strong>表示的是“<strong>is-a</strong>”关系，<strong>interface</strong>表示的是“<strong>like-a</strong>”关系，大家在选择时可以作为一个依据，当然这是建立在对问题领域的理解上的，比如：如果我们认为AlarmDoor在概念本质上是报警器，同时又具有Door的功能，那么上述的定义方式就要反过来了。
