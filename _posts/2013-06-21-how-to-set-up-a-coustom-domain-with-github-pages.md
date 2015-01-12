@@ -7,7 +7,9 @@ description: 在介绍之前，首先得搞清楚Github托管项目所支持的�
 ---
 {% include JB/setup %}
 #购买域名后如何绑定在Github上托管的网站
+
 ##1 前言
+
 在介绍之前，首先得搞清楚Github托管项目所支持的类型，一种是<code class="cd">User/Organization Pages</code>，另一种是<code class="cd">Project Pages</code>，这是两种Github托管网站上支持的两种基本类型。
 
 ###User/Organization Pages
@@ -28,7 +30,7 @@ luyueming.info
 ##3 设置DNS
 进入你的域名管理，我的域名是在[GoDaddy](http://www.godaddy.com/)购买的，主要国外的比较便宜，而且不用备案，很方便呀。登录官网后，进入域名管理界面，里面有个<code class="cd">DNS Manager</code>，点击<code class="cd">Launch</code>，进入如下页面：
 
-<img src="/img/blog/host.jpg" width="750px" height="470px" alt="GoDaddy设置DNS，绑定域名" class="pic"></img>
+<img src="/img/blog/host.jpg" width="750px" height="470px" alt="GoDaddy设置DNS，绑定域名" class="pic" />
 
 如果你想绑定在你的<code class="cd">主域名</code>中，你必须在<code class="cd">A记录</code>下添加一条记录指向IP<code class="cd">204.232.175.78</code>。如图所述，我在A(Host)下只有一条记录，Host为@，代表网址为luyueming.info。Points to则代表你所指向的IP，这里我们是204.232.175.78。编辑好之后点击图片右上角保存就行。
 
