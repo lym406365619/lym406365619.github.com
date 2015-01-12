@@ -2,11 +2,8 @@ permalink : /blog/:year/:month/:day/:title
 
 #使用pygments高亮代码
 #使自定义的插件无效
-#文件发生变动，重新组织工程内容
-pygments : true
-markdown : rdiscount
-#safe : true
-auto : true
+highlighter: pygments
+markdown: kramdown
 
 #设置分页，每页最多显示8篇博文
 paginate : 8
