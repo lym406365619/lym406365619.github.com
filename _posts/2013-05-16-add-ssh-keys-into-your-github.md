@@ -56,12 +56,13 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
 
 如下图所示：
 
-<img src="/img/blog/git_ssh.png" width="600px" height="459px" class="pic"></img>
+<img src="/img/blog/git_ssh.png" width="600px" height="459px" class="pic" />
 
 添加过程github会提示你输入一次你的github密码。
 
 ##4 测试SSH连接Github
 使用如下代码测试，结果如下：
+
 <pre class="command-line">
     <span class="command">lym@lym-desktop:~$ ssh -T git@github.com</span>
     <span class="command">Hi lym406365619! You've successfully authenticated, but GitHub does not provide shell access</span>
@@ -70,6 +71,7 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
 
 ##5 设置git用户名与邮箱
 打开电脑终端，首先设置你的用户名：
+
 <pre class="command-line">
     <span class="command">$ git config --global user.name "<em>Your Name Here</em>"</span>
     <span class="comment"># Sets the default name for git to use when you commit</span>
@@ -80,4 +82,4 @@ description: 在使用git clone命令时，如果你使用的操作系统未在G
     <span class="comment"># Sets the default email for git to use when you commit</span>
 </pre>
 
-注意：你的邮箱地址必须跟你其中的一个Github账户有关。如果不是，请点击[这里](https://help.github.com/articles/how-do-i-change-my-primary-email-address)，在你的Github账户中添加邮箱，并且也可以通过上述链接隐藏你的邮箱。
+注意：你的邮箱地址必须跟你其中的一个Github账户有关。如果不是，请点击[这里](https://help.github.com/articles/changing-your-primary-email-address/)，在你的Github账户中添加邮箱，并且也可以通过上述链接隐藏你的邮箱。

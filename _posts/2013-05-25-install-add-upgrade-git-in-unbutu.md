@@ -39,6 +39,7 @@ ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.
 
 ##3 运行git clone HTTPS出现的错误及解决办法
 在使用<code class="cd">git clone</code>命令时，使用https链接进行clone时，可能会出现以下[错误](https://help.github.com/articles/https-cloning-errors)：
+
 <pre class="command-line">
     <span class="output">error: The requested URL returned error: 401 while accessing</span>
     <span class="output">https://github.com/<em>user</em>/<em>repo</em>.git/info/refs?service=git-receive-pack</span>
@@ -59,6 +60,7 @@ ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.
 如果出现上述错误，解决办法如下：
 
 1） 检查以下你的git版本，如果你的版本低于1.7.10，那么你就需要升级以下你的git，升级方法在上面已经介绍里，命令：
+
 <pre class="command-line">
     <span class="command">$ git --version</span>
     <span class="output">git version <em>1.7.10.4</em></span>
@@ -66,6 +68,7 @@ ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.
 
 
 2） 检查以下你的远程仓库是否存在于Github上，并且URL是大小写敏感的，看看是不是字字母大小写弄错了。比如我的运行程序：
+
 <pre class="command-line">
     <span class="command">$ git remote -v</span>
     <span class="comment"># View existing remotes</span>

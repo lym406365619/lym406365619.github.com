@@ -13,7 +13,7 @@ JSP是Java Server Page的缩写，它是Servlet的扩展，是一种基于本文
 
 ###1.1 自定义错误页面
 使用JSP中的page指令的errorPage属性自定义错误页面，代码如下：
-{% highlight java %}
+{% highlight jsp %}
 <%@ page errorPage="error.jsp" %>
 {% endhighlight %}
 其中error.jsp是一个专门负责处理异常的网页。
@@ -30,14 +30,14 @@ JSP是Java Server Page的缩写，它是Servlet的扩展，是一种基于本文
 在一些网站中添加注册信息是，注册成功后可能需要弹出一个“注册成功”的提示信息窗口，这就需要在JSP脚本中插入JavaScript的alert()方法来实现。
 
 创建用户注册表单页index.jsp，将表单提交到save.jsp，关键代码如下：
-{% highlight html %}
+{% highlight jsp %}
 <form action="save.jsp" method="post">
 	......
 </form>
 {% endhighlight %}
 
 创建save.jsp页面，该页只是为了演示如何在JSP脚本中插入JavaScript代码，并没有真正对表单数据进行处理，代码如下：
-{% highlight html %}
+{% highlight jsp %}
 <%
 	out.println("<script>alert('注册成功！');window.location.href='index.jsp';</script>")
 %>
@@ -136,12 +136,12 @@ public class TagBody extends BodyTagSupport {
 {% endhighlight %}
 <strong>3）创建index.jsp页面。</strong>主要代码如下：
 {% highlight html %}
-  <body>
-  		<toUpperCase:toupp>hello welcome!!!!</toUpperCase:toupp>  	
-  </body>
+<body>
+	<toUpperCase:toupp>hello welcome!!!!</toUpperCase:toupp>  	
+</body>
 {% endhighlight %}  
 并在该jsp页面前加上下面一行，否则会报错。
-{% highlight java %}
+{% highlight jsp %}
 <%@ taglib uri="/WEB-INF/tagbody.tld"  prefix="toUpperCase"%>
 {% endhighlight %}  
 

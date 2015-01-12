@@ -60,17 +60,16 @@ title : Atom Feed
 </div>
 
 之后在你的html页面head标签中添加下面代码：
+
 <div class="highlight">
- <pre>
-   <code class="text"><span class="nt">&lt;link</span> href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"<span class="nt">></span></code></pre>
+ <pre><code class="text"><span class="nt">&lt;link</span> href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"<span class="nt">></span></code></pre>
 </div>
 
 若果你已经含有<code class="cd">atom.xml</code>这个文件，在格式<code class="cd">entry</code>里添加<code class="cd">summary</code>，也就是每篇博客的摘要部分。下面我介绍一下上面需要注意的几个注意事项：
 
 1）首先得现在你的配置文件<code class="cd">_config.yml</code>中配置一下属性site.production_url、site.JB.atom_path、site.author.name、site.author.email，不然就无法使用这些参数属性，可能会影响后面搜索功能的使用。如果你不想设置，可以直接在上面选项中填写，比如&#123;{ site.title }}可以写一个你自己喜欢的名称。以下是我设置的内容，可以参考一下：
-<div class="highlight">
-  <pre>
-    <code class="text">title : lym的博客
+{% highlight yaml %}
+title : lym的博客
 author :
   name : lym
   email : luyueming1989@gmail.com
@@ -80,9 +79,8 @@ production_url : http://luyueming.info
 
 JB :
   BASE_PATH : false
-  atom_path : /atom.xml</code></pre>
-</div>
-
+  atom_path : /atom.xml
+{% endhighlight %}
 2） 在使用post.description选项时，在你需要发表的md文件里添加description选项，比如我这篇博客的设置：
 
 配置好RSS feed后，你可以在本地运行Jekyll，访问[http://loaclhost:4000/atom.xml](http://loaclhost:4000/atom.xml)看看你本地的RSS文件是否有问题。如果出现你所有的文章以及摘要，那说明你打配置文件没有出错。接着将你的修改好的项目提交到Github上吧。
@@ -90,32 +88,35 @@ JB :
 ##2 进入Tapir提交RSS feed
 Tapir的官网为[http://tapirgo.com](http://tapirgo.com/)，进入官网后，在Your RSS feed选项中填写atom.xml的访问网址，比如我的就是[http://luyueming.info/atom.xml](http://luyueming.info/atom.xml)。这里需要注意的是，你可以提交带有http的网址，也可以提交不含http的网址，因为生成的token并不是一样的。不过经本人测定，还是选择带有http的那个url，不然在你部署完成之后，搜索的时候可能会出现重复的两条记录，即同一篇博文出现两次。之后在下面选项填好你的E-mail地址，点击大按钮GO！就可以帮你自动生成一个token以及一个secret token。这边我们只需要记下第一个token就行，生成页面如下所示。
 
-<img src="/img/blog/Tapir_token.png" width="561px" height="226px" alt="Tapir生成的token" class="pic"></img>
+<img src="/img/blog/Tapir_token.png" width="561px" height="226px" alt="Tapir生成的token" class="pic"/>
 
 ##3 加入search框以及JavaScript
 
 在你需要搜索的界面加上一个search框，代码如下：
-<div class="highlight">
-  <pre>
-    <code class="text"><span class="nt">&lt;form</span> class="navbar-search pull-right" action="search.html"<span class="nt">></span>
-  <span class="nt">&lt;input</span> type="text" class="search-query" placeholder="Search"<span class="nt">></span>
-<span class="nt">&lt;/form></span></code></pre>
-</div>
+
+{% highlight html %}
+<form class="navbar-search pull-right" action="search.html">
+  <input type="text" class="search-query" placeholder="Search">
+</form>
+{% endhighlight %}
 
 由于搜索用到了JQuery，需要加入两个JS文件<code class="cd">jquery.min.js</code>和<code class="cd">jquery-tapir.min.js</code>。由于search.html是在加载时执行搜索，所以这两个JS文件必须在header中加载，我的代码如下：
-<div class="highlight">
-  <pre>
-    <code class="text">&lt;script src="&#123;{ BASE_PATH }}/js/jquery-1.6.1.min.js"></script>
-&lt;script src="&#123;{ BASE_PATH }}/js/jquery-tapir.min.js"></script></code></pre>
-</div>
+
+{% highlight html %}
+<script src="{{ BASE_PATH }}/js/jquery-1.6.1.min.js">
+<script src="{{ BASE_PATH }}/js/jquery-tapir.min.js">
+{% endhighlight %}
 
 你可以在Github上下载这两个文件，使用<code class="cd">git clone</code>命令
+
 <pre class="command-line">
   <span class="command">$ git clone git@github.com:TapirGo/jquery-plugin.git</span>
 </pre>
+
 ##4 创建search.html
 
 由于上面的action为<code class="cd">search.html</code>。在根目录下创建该文件，内容如下：
+
 <div class="highlight">
   <pre>
     <code class="text">---
@@ -137,6 +138,4 @@ title: 搜索结果
 
 上面的红色字体就是之前生成的token，用你生成的值代替它就行了。
 
-按照上述方法部署之后，应该就能在站内实现全局静态搜索了。可以点击我的的搜索页面试试，网址为[http://luyueming.info/search.html](http://luyueming.info/search.html)。
-
-
+按照上述方法部署之后，应该就能在站内实现全局静态搜索了。

@@ -188,7 +188,7 @@ public class StringUtil {
 {% endhighlight %}
 运行结果如下所示：
 
-<img src="/img/blog/money_convert.png" width="433px" height="72px" class="pic" alt="convert money with javabean"></img>
+<img src="/img/blog/money_convert.png" width="433px" height="72px" class="pic" alt="convert money with javabean" />
 
 ##4 总结
 本实例的实现关键是如何找到其中的算法规律。例如，读取123456789.12这样一个数字，可以将数据以小数点为界限分为两个部分，小数点左侧的数字从各位起每4位组成一个单元，然后想读取个、十、百、千的方法读取各个单元，并加上该单元的单位；小数点右侧的数字可以直接读取。

@@ -17,13 +17,14 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 ##2 获得google分析的tracking_id
 进入google分析[官网](http://www.google.cn/intl/zh-CN/analytics/)。登陆进去，依次点击管理 --> 新账户，选择想要跟踪的内容，这边我们选着网站，跟踪方法选择Universal Analytics,接着填入网站名称、网址等基本信息，点击获取跟踪ID，此时网站会总动帮你生成一个跟踪ID以及你的跟踪代码，下图是我的账户生成的跟踪ID以及跟踪代码。
 
-<img src="/img/blog/google_analytics.png" width="578px" height="431px" class="pic" alt="谷歌分析ID以及跟踪代码"></img>
+<img src="/img/blog/google_analytics.png" width="578px" height="431px" class="pic" alt="谷歌分析ID以及跟踪代码" />
 
 ##3 将Google分析部署到你的Github项目
 
 ###------设置tracking_id
 
 打开<code class="cd">&#95;config.yml</code>配置文件，设置一下JB/analytics下的google的tracking-id，如下所示:
+
 <div class="highlight">
   <pre>
     <code class="text">JB :
@@ -46,6 +47,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 2） 在跟踪代码段与所有网页内容之后（如置于HTML正文的底部）。
 
 其中analytics位于_layouts下的JB文件夹里，代码为：
+
 <div class="highlight">
   <pre>
      <code class="text">&#123;% <span class="ck">if</span> site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
@@ -67,6 +69,7 @@ description: 首先了解一下什么是谷歌分析，进入中文官网请点�
 
 ###------设置JavaScript代码
 刚开始我把之前生成的JavaScript代码复制到<code class="cd">&#95;include/JB/analytics-providers/google</code>里面，但这个时候问题出现了，我利用谷歌调试工具进行测试，发现代码没有生效（一会我会告诉大家如何知道自己的跟踪已经设置成功了），不知道什么原因，而且我也是按照官方的设置进行部署的。于是我就使用JB使用的异步跟踪设置方式，发现测试成功。代码如下：
+
 <div class="highlight">
   <pre>
     <code class="text">&#60;script type="text/javascript">
@@ -121,7 +124,7 @@ IE/Sarari/Firefox | [Charles](http://www.xk72.com/charles/download.php)
 
 以下是我测试页面的结果:
 
-<img src="/img/blog/google_tracking.png" width="500px" height="387" alt="Google跟踪分析调试结果" class="pic"></img>
+<img src="/img/blog/google_tracking.png" width="500px" height="387" alt="Google跟踪分析调试结果" class="pic" />
 
 ##5 结语
 个人提交Google跟踪分析已经两天了，不过我的Google跟踪状态还是“未安装跟踪代码”，上网搜了以下，好像确实要等很久，如果各位也像我一样，不用着急，慢慢等吧。不过网站的一些数据还是可以看到的，因为Google会自动帮你生成一个报告分析，看了一下还是很详细的，可以慢慢研究。

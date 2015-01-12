@@ -263,8 +263,8 @@ public class Diamond {
 }
 {% endhighlight %}
 输出结果如下：
-{% highlight java %}
-     *
+{% highlight text %}
+	 *
     * *
    *   *
   *     *
