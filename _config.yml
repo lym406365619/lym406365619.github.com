@@ -4,6 +4,7 @@ permalink : /blog/:year/:month/:day/:title
 #使自定义的插件无效
 highlighter: pygments
 markdown: kramdown
+safe: true
 
 #设置分页，每页最多显示8篇博文
 paginate : 8
