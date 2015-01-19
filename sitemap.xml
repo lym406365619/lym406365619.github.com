@@ -7,6 +7,34 @@ layout: nil
     <loc>{{ site.production_url }}/</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
   </url>
+  <url>
+    <loc>{{ site.production_url }}/home.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/about.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/archive.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/categories.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/tags.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/page2/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}/page3/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+  </url>
   {% for post in site.posts %}
   <url>
     <loc>{{ site.production_url }}{{ post.url }}</loc>
