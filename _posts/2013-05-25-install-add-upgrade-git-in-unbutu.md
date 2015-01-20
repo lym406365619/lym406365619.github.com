@@ -26,6 +26,7 @@ description: 对刚刚接触Github的人们来说，安装及使用git是必须�
 ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.net/~git-core/+archive/ppa)
 
 在终端运行以下命令
+
 <pre class="command-line">
     <span class="command">$ sudo apt-add-repository ppa:git-core/ppa</span>
     <span class="command">$ sudo apt-get update</span>
@@ -33,6 +34,7 @@ ppa的地址：[https://launchpad.net/~git-core/+archive/ppa](https://launchpad.
 </pre>
 
 如果本地已经安装过git，可以使用升级命令：
+
 <pre class="command-line">
     <span class="command">$ sudo sudo apt-get dist-upgrade</span>
 </pre>
